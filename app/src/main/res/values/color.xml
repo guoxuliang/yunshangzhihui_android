@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fff</color>
+    <color name="gray_h1">#EDEDED</color>
+    <color name="black">#000</color>
+    <color name="tab_color_bg">#C10003</color>
+    <color name="red">#FF0000</color>
+    <color name="lightwhite">#fff</color>
+    <color name="update_color">#fff</color>
+
+
+</resources>

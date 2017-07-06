@@ -12,8 +12,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.utils.Exceptions;
 /**
  * Created by zhy on 16/3/10.
  */
-public class CookieJarImpl implements CookieJar
-{
+public class CookieJarImpl implements CookieJar {
     private CookieStore cookieStore;
 
     public CookieJarImpl(CookieStore cookieStore)

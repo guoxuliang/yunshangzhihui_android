@@ -13,8 +13,7 @@ import okhttp3.Cookie;
  * http://www.geebr.com/post/okHttp3%E4%B9%8BCookies%E7%AE%A1%E7%90%86%E5%8F%8A%E6%8C%81%E4%B9%85%E5%8C%96
  */
 
-public class SerializableHttpCookie implements Serializable
-{
+public class SerializableHttpCookie implements Serializable {
     private static final long serialVersionUID = 6374381323722046732L;
 
     private transient final Cookie cookie;

@@ -11,8 +11,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.utils.Exceptions;
 /**
  * Created by zhy on 15/12/14.
  */
-public class PostStringRequest extends OkHttpRequest
-{
+public class PostStringRequest extends OkHttpRequest {
     private static MediaType MEDIA_TYPE_PLAIN = MediaType.parse("text/plain;charset=utf-8");
 
     private String content;

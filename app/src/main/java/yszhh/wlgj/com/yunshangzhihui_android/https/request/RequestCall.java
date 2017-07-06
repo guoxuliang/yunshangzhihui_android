@@ -14,8 +14,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.callback.Callback;
  * Created by zhy on 15/12/15.
  * 对OkHttpRequest的封装，对外提供更多的接口：cancel(),readTimeOut()...
  */
-public class RequestCall
-{
+public class RequestCall {
     private OkHttpRequest okHttpRequest;
     private Request request;
     private Call call;

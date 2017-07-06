@@ -10,6 +10,7 @@ import okhttp3.Response;
  */
 
 public abstract class GenericsCallback<T> extends Callback<T> {
+
     IGenericsSerializator mGenericsSerializator;
 
     public GenericsCallback(IGenericsSerializator serializator) {

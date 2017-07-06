@@ -8,8 +8,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.request.RequestCall;
 /**
  * Created by zhy on 16/3/2.
  */
-public class HeadBuilder extends GetBuilder
-{
+public class HeadBuilder extends GetBuilder {
     @Override
     public RequestCall build()
     {

@@ -12,8 +12,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.OkHttpUtils;
 /**
  * Created by zhy on 15/12/15.
  */
-public abstract class FileCallBack extends Callback<File>
-{
+public abstract class FileCallBack extends Callback<File> {
     /**
      * 目标文件存储的文件夹路径
      */

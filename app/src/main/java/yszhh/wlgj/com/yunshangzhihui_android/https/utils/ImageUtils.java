@@ -12,8 +12,7 @@ import java.lang.reflect.Field;
 /**
  * Created by zhy on 15/11/6.
  */
-public class ImageUtils
-{
+public class ImageUtils {
     /**
      * 根据InputStream获取图片实际的宽度和高度
      *

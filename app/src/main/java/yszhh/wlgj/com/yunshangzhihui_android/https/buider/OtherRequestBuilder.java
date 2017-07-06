@@ -8,8 +8,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.request.RequestCall;
 /**
  * DELETE、PUT、PATCH等其他方法
  */
-public class OtherRequestBuilder extends OkHttpRequestBuilder<OtherRequestBuilder>
-{
+public class OtherRequestBuilder extends OkHttpRequestBuilder<OtherRequestBuilder> {
     private RequestBody requestBody;
     private String method;
     private String content;

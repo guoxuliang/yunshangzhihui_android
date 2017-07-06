@@ -14,8 +14,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.request.RequestCall;
 /**
  * Created by zhy on 15/12/14.
  */
-public class GetBuilder extends OkHttpRequestBuilder<GetBuilder> implements HasParamsable
-{
+public class GetBuilder extends OkHttpRequestBuilder<GetBuilder> implements HasParamsable {
     @Override
     public RequestCall build()
     {

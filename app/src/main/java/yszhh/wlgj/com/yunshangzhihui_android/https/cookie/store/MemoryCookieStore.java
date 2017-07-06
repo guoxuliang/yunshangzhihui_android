@@ -12,8 +12,7 @@ import okhttp3.HttpUrl;
 /**
  * Created by zhy on 16/3/10.
  */
-public class MemoryCookieStore implements CookieStore
-{
+public class MemoryCookieStore implements CookieStore {
     private final HashMap<String, List<Cookie>> allCookies = new HashMap<>();
 
     @Override

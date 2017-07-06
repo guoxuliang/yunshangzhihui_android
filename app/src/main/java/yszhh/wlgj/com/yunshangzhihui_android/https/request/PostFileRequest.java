@@ -14,8 +14,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.utils.Exceptions;
 /**
  * Created by zhy on 15/12/14.
  */
-public class PostFileRequest extends OkHttpRequest
-{
+public class PostFileRequest extends OkHttpRequest {
     private static MediaType MEDIA_TYPE_STREAM = MediaType.parse("application/octet-stream");
 
     private File file;

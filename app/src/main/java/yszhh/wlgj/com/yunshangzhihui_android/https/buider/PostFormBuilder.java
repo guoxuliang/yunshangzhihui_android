@@ -12,8 +12,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.request.RequestCall;
 /**
  * Created by zhy on 15/12/14.
  */
-public class PostFormBuilder extends OkHttpRequestBuilder<PostFormBuilder> implements HasParamsable
-{
+public class PostFormBuilder extends OkHttpRequestBuilder<PostFormBuilder> implements HasParamsable {
     private List<FileInput> files = new ArrayList<>();
 
     @Override

@@ -8,8 +8,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.request.RequestCall;
 /**
  * Created by zhy on 15/12/14.
  */
-public class PostFileBuilder extends OkHttpRequestBuilder<PostFileBuilder>
-{
+public class PostFileBuilder extends OkHttpRequestBuilder<PostFileBuilder> {
     private File file;
     private MediaType mediaType;
 

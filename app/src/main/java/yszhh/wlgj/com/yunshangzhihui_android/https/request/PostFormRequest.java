@@ -21,8 +21,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.https.buider.PostFormBuilder;
 /**
  * Created by zhy on 15/12/14.
  */
-public class PostFormRequest extends OkHttpRequest
-{
+public class PostFormRequest extends OkHttpRequest {
     private List<PostFormBuilder.FileInput> files;
 
 

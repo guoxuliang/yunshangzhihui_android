@@ -28,8 +28,7 @@ public abstract class OkHttpRequest
         this.headers = headers;
         this.id = id ;
 
-        if (url == null)
-        {
+        if (url == null) {
             Exceptions.illegalArgument("url can not be null.");
         }
 

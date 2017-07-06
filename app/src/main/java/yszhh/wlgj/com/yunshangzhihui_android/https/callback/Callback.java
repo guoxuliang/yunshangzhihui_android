@@ -12,8 +12,7 @@ public abstract class Callback<T> implements okhttp3.Callback {
      *
      * @param request
      */
-    public void onBefore(Request request, int id)
-    {
+    public void onBefore(Request request, int id) {
     }
 
     /**

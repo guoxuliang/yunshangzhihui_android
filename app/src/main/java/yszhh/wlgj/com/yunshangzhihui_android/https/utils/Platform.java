@@ -22,8 +22,7 @@ import android.os.Looper;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class Platform
-{
+public class Platform {
     private static final Platform PLATFORM = findPlatform();
 
     public static Platform get()

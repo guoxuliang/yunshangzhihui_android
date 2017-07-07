@@ -36,8 +36,8 @@ import yszhh.wlgj.com.yunshangzhihui_android.ui.entity.User;
  * @author 登陆界面 作者：guoxuliang
  */
 public class LoginActivity extends BaseActivity implements OnClickListener{
-    private EditText etusername;// 用户名
-    private EditText etpwd;// 密码
+//    private EditText etusername;// 用户名
+//    private EditText etpwd;// 密码
     private Button btlogin,btlogin2,btlogin3,btlogin4,btlogin5,btlogin6,btlogin7,btlogin8,btlogin9,btlogin10;// 登录
     private String username;
     private String password;
@@ -103,8 +103,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
     }
 
     private void initViews() {
-        etusername = (EditText) findViewById(R.id.etusername);
-        etpwd = (EditText) findViewById(R.id.etpwd);
+//        etusername = (EditText) findViewById(R.id.etusername);
+//        etpwd = (EditText) findViewById(R.id.etpwd);
         btlogin = (Button) findViewById(R.id.btlogin);
         btlogin2 = (Button) findViewById(R.id.btlogin2);
         btlogin3 = (Button) findViewById(R.id.btlogin3);
@@ -130,16 +130,18 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
     public void onClick(View v) {
 switch (v.getId()){
     case R.id.btlogin:
-        textview.setText("");
-        getHtml(textview);
+        openActivity(MainActivity.class);
         break;
     case R.id.btlogin2:
         textview.setText("");
         postString(textview);
+//        getHtml(textview);
         break;
     case R.id.btlogin3:
         textview.setText("");
-        postFile(textview);
+//        postFile(textview);
+//        getHtml(textview);
+        postString(textview);
         break;
     case R.id.btlogin4:
         textview.setText("");

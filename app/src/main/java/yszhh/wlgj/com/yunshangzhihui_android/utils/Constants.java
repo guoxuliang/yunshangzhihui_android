@@ -8,13 +8,9 @@ package yszhh.wlgj.com.yunshangzhihui_android.utils;
  * 
  */
 public class Constants {
-//	  public static final String SERVER_BASE_URL = "http://192.168.1.100:8080/";//张诚
-	  public static final String SERVER_BASE_URL = "http://192.168.0.47:8080/";//王丰
-//    public static final String SERVER_BASE_URL = "http://192.168.0.202:9081";// 内网测试
-//    public static final String SERVER_BASE_URL = "http://202.100.15.66:9082";// 公网测试
-//    public static final String SERVER_BASE_URL = "http://202.100.15.66:9080";// 公网
-    public static String WSDL = "source-api/rest/sourcewebservice/";//公
-//    public static String WSDL = "source-api/rest/bmwebservice/";//内
+
+//public static String SERVER_BASE_URL = "http://smsx.xazhsq.com/";//公网
+public static String SERVER_BASE_URL = "http://www.sxyht.com:8000/AppServer/login/doLogin";
     
     
     public static boolean UPDATE_USER_SUCCESS=false;

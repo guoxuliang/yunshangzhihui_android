@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.webkit.WebView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -17,8 +18,9 @@ import yszhh.wlgj.com.yunshangzhihui_android.ui.fragment.Fragment2;
 import yszhh.wlgj.com.yunshangzhihui_android.ui.fragment.Fragment3;
 import yszhh.wlgj.com.yunshangzhihui_android.ui.fragment.Fragment4;
 import yszhh.wlgj.com.yunshangzhihui_android.ui.fragment.Fragment5;
+import yszhh.wlgj.com.yunshangzhihui_android.ui.tools.BackHandledInterface;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements BackHandledInterface {
     private Fragment fragment1;
     private Fragment fragment2;
     private Fragment fragment3;
@@ -32,6 +34,8 @@ public class MainActivity extends BaseActivity {
     RadioButton radio3;
     RadioButton radio4;
     RadioButton radio5;
+
+    private Fragment1 mBackHandedFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,14 +98,6 @@ public class MainActivity extends BaseActivity {
 
     }
 
-
-
-
-
-
-
-
-
     long waitTime = 2 * 1000;
     long touchTime = 0;
     // 再按一次退出
@@ -117,5 +113,12 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+
+    @Override
+    public void setSelectedFragment(Fragment1 selectedFragment) {
+        this.mBackHandedFragment = selectedFragment;
+
     }
 }

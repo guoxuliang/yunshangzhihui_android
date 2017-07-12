@@ -13,8 +13,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.R;
 public class Fragment4 extends Fragment {
 	ImageView iv;
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-							 Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.fragment_find, null);
 		initViews(view);

@@ -19,14 +19,14 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/welcome" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:gravity="clip_horizontal"
             android:text="信息办主任,您好"
             android:textSize="18sp" />
@@ -35,76 +35,85 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:gravity="clip_horizontal"
             android:text="区域:长武县"
             android:textSize="16sp" />
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="70dp"
-        android:background="#cccccc"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ffffff">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             android:text="修改密码"
-            android:paddingLeft="20dp"
-            android:gravity="center_vertical"
             android:textSize="18sp" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#cccccc"/>
+        android:background="#cccccc" />
+
     <LinearLayout
+        android:id="@+id/version_updata"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             android:text="版本更新"
-            android:paddingLeft="20dp"
-            android:gravity="center_vertical"
             android:textSize="18sp" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#cccccc"/>
+        android:background="#cccccc" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             android:text="意见反馈"
-            android:paddingLeft="20dp"
-            android:gravity="center_vertical"
             android:textSize="18sp" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#cccccc"/>
+        android:background="#cccccc" />
 
     <LinearLayout
+        android:id="@+id/exit_login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="退出登录"
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
-            android:textSize="18sp"
-            android:id="@+id/textView" />
+            android:text="退出登录"
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

@@ -1,13 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@color/white"
     android:orientation="vertical">
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+
+    <include
+        layout="@layout/new_back_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    -
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/progress_bar_states" />
+
+        <WebView
+            android:id="@+id/webview_web"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/pb"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/query_progressbar"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/web_bottom"
+            android:background="@color/hui_se" />
+
+
+        -
+
+        <LinearLayout
+            android:id="@+id/web_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/goBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20dp"
+                android:padding="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/goForward"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20dp"
+                android:padding="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/reload"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20dp"
+                android:padding="4dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>

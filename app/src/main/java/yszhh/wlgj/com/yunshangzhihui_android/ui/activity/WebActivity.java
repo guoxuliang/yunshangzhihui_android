@@ -1,61 +1,69 @@
-package yszhh.wlgj.com.yunshangzhihui_android.ui.fragment;
+package yszhh.wlgj.com.yunshangzhihui_android.ui.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
 import yszhh.wlgj.com.yunshangzhihui_android.R;
-import yszhh.wlgj.com.yunshangzhihui_android.bases.BaseFragment;
-import yszhh.wlgj.com.yunshangzhihui_android.ui.tools.BackHandledInterface;
-import yszhh.wlgj.com.yunshangzhihui_android.ui.tools.StringHelper;
+import yszhh.wlgj.com.yunshangzhihui_android.bases.BaseActivity;
 
+/**
+ * Created by Administrator on 2017/7/11 0011.
+ * 经济建设
+ */
 
-public class Fragment1 extends BaseFragment {
-    protected BackHandledInterface mBackHandledInterface;
+public class WebActivity extends BaseActivity implements View.OnClickListener {
+    private ImageView shop_all_btn;
     private WebView webview_web;
-    private ImageView back_title_id;
+    private Handler handler=null;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, null);
-        initViews(view);
-        back_title_id = (ImageView) view.findViewById(R.id.back_title_id);
-        return view;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_web);
+        initViews();
+        initWeb();
+    }
+    private void initViews() {
+        shop_all_btn = (ImageView) findViewById(R.id.shop_all_btn);
+        shop_all_btn.setVisibility(View.GONE);
+        webview_web = (WebView) findViewById(R.id.webview_web);
+        shop_all_btn.setOnClickListener(this);
     }
 
-    private void initViews(View view) {
-        webview_web = (WebView) view.findViewById(R.id.webview_web);
-        back_title_id = (ImageView) view.findViewById(R.id.back_title_id);
-        back_title_id.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                finish();
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.shop_all_btn:
+                //跳转个人中心
+                openActivity(PersonalCenterActivity.class);
+                break;
+        }
+    }
+
+    private void initWeb() {
         WebSettings webSettings = webview_web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
-//        if (isConnNet(getContext())) {
-            webview_web.loadUrl("http://jct.xys.gov.cn");
-//        } else {
-//            showToast("请检查网络");
-//        }
-
+        if (isConnNet(this)) {
+            showToast("请检查网络");
+            return;
+        }
+        webview_web.loadUrl("http://113.140.82.150:9009");
 
         webview_web.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+//                webview_web.setInitialScale(200);
+//                webview_web.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
 
 
                 //编写 javaScript方法
@@ -88,35 +96,19 @@ public class Fragment1 extends BaseFragment {
                 return false;
             }
         });
-//=============
-        if (!(getActivity() instanceof BackHandledInterface)) {
-            throw new ClassCastException(
-                    "Hosting Activity must implement BackHandledInterface");
-        } else {
-            this.mBackHandledInterface = (BackHandledInterface) getActivity();
-        }
-    }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // 告诉FragmentActivity，当前Fragment在栈顶
-        mBackHandledInterface.setSelectedFragment(this);
-
-    }
-
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message message) {
-            switch (message.what) {
-                case 1: {
-                    webViewGoBack();
+          handler = new Handler() {
+            @Override
+            public void handleMessage(Message message) {
+                switch (message.what) {
+                    case 1: {
+                        webViewGoBack();
+                    }
+                    break;
                 }
-                break;
             }
-        }
-    };
-
+        };
+    }
     private void webViewGoBack() {
         webview_web.goBack();
     }

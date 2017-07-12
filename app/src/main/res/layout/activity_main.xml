@@ -12,63 +12,64 @@
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5dp"
         android:background="@color/white"
-        android:orientation="horizontal"
-       >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/radio0"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:button="@null"
             android:checked="true"
             android:drawableTop="@drawable/tab_apps_selector"
             android:gravity="center_horizontal"
             android:maxLines="1"
-            android:text="首页"
+            android:text="追赶目标"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:button="@null"
-            android:gravity="center_horizontal" android:drawableTop="@drawable/tab_apps_selector"
+            android:drawableTop="@drawable/tab2_apps_selector"
+            android:gravity="center_horizontal"
             android:maxLines="1"
-            android:text="分类"
+            android:text="经济建设"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:button="@null"
+            android:drawableTop="@drawable/tab3_apps_selector"
             android:gravity="center_horizontal"
             android:maxLines="1"
-            android:text="排行" android:drawableTop="@drawable/tab_apps_selector"
+            android:text="惠民工程"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio3"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:button="@null"
+            android:drawableTop="@drawable/tab4_apps_selector"
             android:gravity="center_horizontal"
             android:maxLines="1"
-            android:text="发现" android:drawableTop="@drawable/tab_apps_selector"
+            android:text="个人中心"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio4"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:button="@null"
             android:gravity="center_horizontal"

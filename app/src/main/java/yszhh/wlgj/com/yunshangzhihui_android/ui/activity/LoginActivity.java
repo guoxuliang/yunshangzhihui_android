@@ -54,9 +54,9 @@ public class LoginActivity extends BaseActivity {
         btlogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-//                login();//调用登陆接口
-                openActivity(WebActivity.class);
-                LoginActivity.this.finish();
+                login();//调用登陆接口
+//                openActivity(WebActivity.class);
+//                LoginActivity.this.finish();
             }
         });
     }
@@ -64,18 +64,18 @@ public class LoginActivity extends BaseActivity {
     private void login() {
         username = etusername.getText().toString().trim();
         password = etpwd.getText().toString().trim();
-//        if (username == null && username.equals("")) {
-//            showToast("用户名不能为空");
-//            return;
-//        }
-//        if (username.length() > 11) {
-//            showToast("用户名位数不对");
-//            return;
-//        }
-//        if (password == null && password.equals("")) {
-//            showToast("密码不能为空");
-//            return;
-//        }
+        if (username == null && username.equals("")) {
+            showToast("用户名不能为空");
+            return;
+        }
+        if (username.length() > 11) {
+            showToast("用户名位数不对");
+            return;
+        }
+        if (password == null && password.equals("")) {
+            showToast("密码不能为空");
+            return;
+        }
         try {
             posts();
         } catch (Exception e) {
@@ -93,9 +93,9 @@ public class LoginActivity extends BaseActivity {
             showToast("请检查网络");
             return;
         }
-        String url="http://10.48.40.205:8181/dologin";
-        OkHttpUtils.post()
-                .url(url)
+        String url="http://10.48.40.67:8181/zgcy/a/loginMobile?username=thinkgem&password=admin";
+        OkHttpUtils.get().
+                url(url)
                 .addParams("userName", username)
                 .addParams("password", CryptTool.md5Digest(password))
                 .build().execute(new BeanCallback<LoginBbean>() {
@@ -107,10 +107,32 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onResponse(LoginBbean response, int id) {
                 showToast("成功");
+                String flag=loginbean.getLoginFlag();
+                String name=loginbean.getRoleNames();
+                boolean admin=loginbean.isAdmin();
+                boolean record=loginbean.isNewRecord();
                 openActivity(NewMainAcivity.class);
-                Log.i("==response","==response"+response);
+                Log.i("==response","flag"+flag+"=="+"name"+name+"=="+"admin"+admin+"=="+"record"+record);
             }
         });
+
+//        OkHttpUtils.post()
+//                .url(url)
+//                .addParams("userName", username)
+//                .addParams("password", CryptTool.md5Digest(password))
+//                .build().execute(new BeanCallback<LoginBbean>() {
+//            @Override
+//            public void onError(Call call, Exception e, int id) {
+//                showToast("失败"+e);
+//                Log.i("==","==e"+e);
+//            }
+//            @Override
+//            public void onResponse(LoginBbean response, int id) {
+//                showToast("成功");
+//                openActivity(NewMainAcivity.class);
+//                Log.i("==response","==response"+response);
+//            }
+//        });
 
 //        OkHttpUtils.post().url(Constants.SERVER_BASE_URL)
 //        OkHttpUtils.post().url(url)

@@ -1,5 +1,7 @@
 package yszhh.wlgj.com.yunshangzhihui_android.utils;
 
+import java.util.Date;
+
 /**
  * Created by Administrator on 2017/7/10 0010.
  */
@@ -7,16 +9,49 @@ package yszhh.wlgj.com.yunshangzhihui_android.utils;
 public class UserDataConstants {
     public static final String SETTINGS = "settings";
 
-    public static final String LOGINNAME = "loginName";
-    public static final String LOGINPWD = "loginPwd";
-    public static final String NICKNAME = "nickName";
-    public static final String REGISTERTIME = "registerTime";
-    public static final String WEBUSERID = "webUserId";
-    public static final String PAYPWDSTATUS = "payPwdStatus";
-    public static final String GESTUREPWDSTATUS = "gesturePwdStatus";
-    public static final String RESTRICTIONSPAYSTATUS = "restrictionsPayStatus";
-    public static final String SMALLNOPAYSTATUS = "smallNoPayStatus";
-    public static final String USEABLEPOINTS = "useablePoints";
-    public static final String ALREADYPOINTSOFMONTH = "alreadyPointsOfMonth";
-    public static final String HEADPHOTO = "headPhoto";
+
+
+    public static final boolean ISLOGIN = Boolean.parseBoolean("isLogin");
+    public static final String MESSAGE = "message";
+
+    public static final String ID = "id";
+    public static final String REMARKS = "remarks";
+    public static final String CREATEDATE = "createDate";
+    public static final String UPDATEDATE = "updateDate";
+    public static final String AREA = "area";
+    public static final String MANAGEMENT = "management";
+
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+//    public static final String LOGINNAME = "loginName";
+
+
+    public static final String LOGINNAME = "islogin";
+    public static final String NO = "no";
+    public static final String NAME = "name";
+    public static final String EMAIL = "email";
+    public static final String PHONE = "phone";
+    public static final String MOBLE = "mobile";
+    public static final String USERTYPE = "userType";
+    public static final String LOGINIP = "loginIp";
+    public static final String LOGINDATE = "loginDate";
+    public static final String LOGINFLAG = "loginFlag";
+    public static final String PHOTO = "photo";
+    public static final String COOKIES = "cookies";
+
+
+    public static final String PASSWORD = "password";
+    public static final String OLDLOGINNAME = "oldLoginName";
+    public static final String NEWPASSWORD = "newPassword";
+    public static final String CONFIRMNEWPASSWORD = "confirmNewPassword";
+    public static final String CODE = "code";
+
 }

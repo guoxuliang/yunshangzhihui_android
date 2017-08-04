@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher" >
+        android:src="@mipmap/icon_login" >
     </ImageView>
 
 </LinearLayout>

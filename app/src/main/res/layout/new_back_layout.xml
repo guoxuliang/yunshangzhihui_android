@@ -50,7 +50,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:text="云上智慧"
+            android:text="追赶超越"
             android:textColor="@color/black"
             android:textSize="@dimen/h1_font_size" />
 

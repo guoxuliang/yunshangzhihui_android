@@ -2,14 +2,14 @@ package yszhh.wlgj.com.yunshangzhihui_android.utils;
 
 /**
  * @author Administrator
- * 
+ *
  */
 public class CryptTool {
     private final static String[] hexDigits = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
     /**
      * 转换字节数组为16进制字串
-     * 
+     *
      * @param b
      *            字节数组
      * @return 16进制字串
@@ -34,7 +34,7 @@ public class CryptTool {
 
     /**
      * MD5 摘要计算(byte[]).
-     * 
+     *
      * @param src
      *            byte[]
      * @throws Exception
@@ -48,7 +48,7 @@ public class CryptTool {
 
     /**
      * MD5 摘要计算(String).
-     * 
+     *
      * @param src
      *            String
      * @throws Exception

@@ -118,7 +118,7 @@
 //            updateNotification.icon = R.mipmap.ic_launcher;
 //            updateNotification.flags |= Notification.FLAG_AUTO_CANCEL;
 //            updateNotification.tickerText = "开始下载";
-//            updateNotification.setLatestEventInfo(this, "云上智慧", "0%", updatePendingIntent);
+//            updateNotification.setLatestEventInfo(this, "追赶超越", "0%", updatePendingIntent);
 //            // 发出通知
 //            updateNotificationManager.notify(NOTIFYID, updateNotification);
 //
@@ -145,7 +145,7 @@
 //                break;
 //            case DOWNLOAD_FAIL:
 //                // 下载失败
-//                updateNotification.setLatestEventInfo(UpdateService.this, "云上智慧", "下载失败,点击取消。", updatePendingIntent);
+//                updateNotification.setLatestEventInfo(UpdateService.this, "追赶超越", "下载失败,点击取消。", updatePendingIntent);
 //
 //                // 设置点击通知栏后消失
 //                updateNotification.flags |= Notification.FLAG_AUTO_CANCEL;
@@ -167,7 +167,7 @@
 //            updatePendingIntent = PendingIntent.getActivity(UpdateService.this, 0, installIntent, 0);
 //
 //            updateNotification.defaults = Notification.DEFAULT_SOUND;// 铃声提醒
-//            updateNotification.setLatestEventInfo(UpdateService.this, "云上智慧", "下载完成,点击安装。", updatePendingIntent);
+//            updateNotification.setLatestEventInfo(UpdateService.this, "追赶超越", "下载完成,点击安装。", updatePendingIntent);
 //            updateNotification.flags |= Notification.FLAG_AUTO_CANCEL;
 //            updateNotificationManager.notify(NOTIFYID, updateNotification);
 //            // updateNotificationManager.cancel(0);

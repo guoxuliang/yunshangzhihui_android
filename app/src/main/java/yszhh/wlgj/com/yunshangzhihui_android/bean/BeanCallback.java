@@ -4,8 +4,6 @@ package yszhh.wlgj.com.yunshangzhihui_android.bean;
  * Created by Administrator on 2017/7/10 0010.
  */
 
-import android.util.Log;
-
 import com.google.gson.Gson;
 
 import java.lang.reflect.ParameterizedType;

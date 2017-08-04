@@ -13,7 +13,7 @@ import yszhh.wlgj.com.yunshangzhihui_android.R;
 public class ViewFlowAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater;
-    private static final int[] ids = {R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher };
+    private static final int[] ids = {R.mipmap.icon_login, R.mipmap.icon_login, R.mipmap.icon_login };
 
     public ViewFlowAdapter(Context context) {
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
